@@ -28,6 +28,7 @@ Grafana
 Now setup monitoring tolls.
 Pre-request:
 1.	Clone the YAML files form Github.
+git clone https://github.com/manoj3004/Docker_Monitoring.git
 
 2.	You have installed these two pre-requisites
 I.	Docker
