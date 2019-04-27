@@ -36,3 +36,7 @@ III.	Create docker network
 # docker network create --driver=overlay monitor
 Step-1: Install cAdvisor, append the following lines to the cAdviser.yml
 
+![image](https://user-images.githubusercontent.com/31573070/56849337-b8109b00-6910-11e9-8953-86f0997504e0.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849338-bc3cb880-6910-11e9-9b80-33c76196d4c0.png)
+
