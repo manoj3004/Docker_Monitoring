@@ -40,3 +40,11 @@ Step-1: Install cAdvisor, append the following lines to the cAdviser.yml
 
 ![image](https://user-images.githubusercontent.com/31573070/56849338-bc3cb880-6910-11e9-9b80-33c76196d4c0.png)
 
+1.	Now execute the cAdvicer.yml file.
+# docker stack deploy -c cAdviser.yml test
+# docker stack ps -f desired-state=running test
+2.	After executed, now access to the cAdvisor dashboard.
+1.	Container related info. http://3.83.126.162:8080/containers/
+
+
+
