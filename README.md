@@ -49,15 +49,39 @@ Step-1: Install cAdvisor, append the following lines to the cAdviser.yml
 
 ![image](https://user-images.githubusercontent.com/31573070/56849360-04f47180-6911-11e9-8ce0-1c67ee29e2bb.png)
 
+2.	Docker related info. http://3.83.126.162:8080/docker/
+
 ![image](https://user-images.githubusercontent.com/31573070/56849363-0aea5280-6911-11e9-9704-a823c64a0de4.png)
+3.	We can also find the all metrics.
+http://3.83.126.162:8080/metrics
+Step-3: Now configure Prometheus, prometheus.yml
 
 ![image](https://user-images.githubusercontent.com/31573070/56849367-10479d00-6911-11e9-9709-db6eeed12e84.png)
 
+
+a.	Now execute configure prometheus.yml file.
+# docker config create prometheus.yml prometheus.yml
+Step-4: Create a very simple monitoring-stack.yml to install Prometheus and Grafana.
+Pre-request:
+a.	Create volume for Prometheus.
+# mkdir -p /data/prometheus/data && chwon -R 1000.1000 /data
+b.	Create volume for Grafana.
+# mkdir -p /data/grafana/data && chown -R 1000.1000 /data
+
 ![image](https://user-images.githubusercontent.com/31573070/56849373-189fd800-6911-11e9-9759-e03a517271b8.png)
+
+a.	Then execute monitoring-stack.yml
+# docker stack deploy -c monitoring-stack.yml monitoring
+# docker stack ps -f desired-state=running monitoring
+b.	Now access the Prometheus dashboard.
+http://3.83.126.162:9090
+
 
 
 ![image](https://user-images.githubusercontent.com/31573070/56849375-1c335f00-6911-11e9-
 895a-c3b4fc42d29b.png)
+
+c.	Now click the target option from the status menu, you will find that node exporter state is UP and healthy. 
 
 ![image](https://user-images.githubusercontent.com/31573070/56849379-281f2100-6911-11e9-9199-3c941f4169ea.png)
 
