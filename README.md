@@ -85,14 +85,29 @@ c.	Now click the target option from the status menu, you will find that node exp
 
 ![image](https://user-images.githubusercontent.com/31573070/56849379-281f2100-6911-11e9-9199-3c941f4169ea.png)
 
+Step-5: Point your browser to 3.83.126.162:3000 to access grafana. 
+a.	Login to grafana with the user 'admin' and password as 'admin’. You will be taken to grafana dashboard.
+
+
 ![image](https://user-images.githubusercontent.com/31573070/56849381-2d7c6b80-6911-11e9-897b-c65523db4d0d.png)
+
+b.	Once you have successfully logged in to the Grafana dashboard, click setting icon followed by 'data sources' and finally 'Add data source' as shown in the image below.
 
 ![image](https://user-images.githubusercontent.com/31573070/56849382-32411f80-6911-11e9-9f0d-be625fcef920.png)
 
+In the add data source page under config tab, provide a name of the data source, type as prometheus. In Http settings, provide URL as the prometheus server IP and access as direct and click 'Add'.
+
+
 ![image](https://user-images.githubusercontent.com/31573070/56849383-38370080-6911-11e9-9017-dca31036f03b.png)
+
+Once data source is added, click the dashboard tab, + icon and import the data source that you have created just now. 
 ![image](https://user-images.githubusercontent.com/31573070/56849386-3cfbb480-6911-11e9-9bcb-d786b2f9b61f.png)
 
+Next, you can import the dashboard from the Imixs-Cloud project:
+
 ![image](https://user-images.githubusercontent.com/31573070/56849389-4258ff00-6911-11e9-96a0-2aa9cf733158.png)
+
+That's it, you can now see how your docker-swarm is working:
 
 ![image](https://user-images.githubusercontent.com/31573070/56849391-471db300-6911-11e9-917f-8fae7e13b9db.png)
 
