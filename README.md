@@ -2,6 +2,8 @@ How to setup Monitoring for Docker Swarm using Prometheus
 
 Architecture
 
+![image](https://user-images.githubusercontent.com/31573070/56849295-54866d80-6910-11e9-92e8-0a4443efaf6b.png)
+
 
  
 cAdvisor
