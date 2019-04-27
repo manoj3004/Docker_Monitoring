@@ -1,0 +1,46 @@
+version: '3'
+services:
+  cadviser:
+    image: google/cadvisor:v0.33.0
+    deploy:
+      mode: replicated
+      replicas: 2
+      resources:
+        reservations:
+          memory: 200M
+        limits:
+          memory: 150M
+    volumes:
+      - /:/rootfs
+      - /var/run:/var/run
+      - /sys:/sys
+      - /var/lib/docker:/var/lib/docker
+    ports:
+      - 8080:8080
+    networks:
+      - monitor
+
+  node-exporter:
+    image: prom/node-exporter
+    networks:
+      - monitor
+    environment:
+      - HOST_HOSTNAME=/etc/host_hostname
+    volumes:
+      - /proc:/host/proc
+      - /sys:/host/sys
+      - /:/rootfs
+      - /etc/hostname:/etc/host_hostname
+    deploy:
+      mode: replicated
+      replicas: 2
+      resources:
+        reservations:
+          memory: 20M
+        limits:
+          memory: 70M
+    command: '--path.procfs /host/proc --path.sysfs /host/sys --collector.filesystem.ignored-mount-points "^/(sys|proc|dev|host|etc)($$|/)" --collector.textfile.directory /etc/node-exporter/ --collector.diskstats --collector.conntrack --collector.entropy --collector.filefd --collector.filesystem  --collector.loadavg --collector.mdadm --collector.meminfo --collector.netstat --collector.stat --collector.textfile --collector.vmstat --collector.ipvs'
+
+networks:
+  monitor:
+    external: true

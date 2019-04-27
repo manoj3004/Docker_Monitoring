@@ -1,0 +1,29 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['172.31.83.74:9090']
+  
+  - job_name: 'dockerd-exporter'
+   # static_configs:
+    #  - targets: ['172.31.83.74:9090']
+    dns_sd_configs:
+    - names:
+      - 'tasks.dockerd-exporter'
+      type: 'A'
+      port: 9323
+
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['172.31.83.74:8080', '172.31.94.164:8080']
+
+  - job_name: 'node-exporter'
+  #  static_configs:
+    dns_sd_configs:
+    - names:
+      - 'tasks.node-exporter'
+      type: 'A'
+      port: 9100
+#      - targets: ['172.31.83.74:9100', '172.31.94.164:9100']
