@@ -12,3 +12,27 @@ cAdvisor
 -	Specifically, for each container it keeps resource isolation parameters, historical resource usage, histograms of complete historical resource usage and network statistics.
 -	This data is exported by container and machine-wide.
 -	cAdvisor scrapes information about containers inside the host system and send this data to the Prometheus.
+
+Prometheus
+-	Prometheus is a multi-dimensional data model.
+-	Prometheus is a monitoring solution to collect metrics from several targets.
+-	Time series collection happens by means of a pull model over http.
+-	Prometheus is to query docker services on predefined metrics, create graphs, query database, to check health status of services. 
+NodeExporter
+-	The Node Exporter exposes the Prometheus metrics of the host machine in which it is running and shows the machine’s file system, networking devices, processor, memory usages and others features as well.
+-	Node exporter can be run as a docker container while reporting stats for the host system.
+Grafana
+-	Grafana which is a graphical interface with a dashboard that supports Prometheus as a back-end to query for the data to generate the graph.
+-	Prometheus has a built-in graph features that can be access through its web interface but Grafana offers a much more powerful feature.
+-	Grafana the face of Prometheus.
+Now setup monitoring tolls.
+Pre-request:
+1.	Clone the YAML files form Github.
+
+2.	You have installed these two pre-requisites
+I.	Docker
+II.	Docker swarm initialize on master node.
+III.	Create docker network
+# docker network create --driver=overlay monitor
+Step-1: Install cAdvisor, append the following lines to the cAdviser.yml
+
