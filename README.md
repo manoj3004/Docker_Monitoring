@@ -47,4 +47,32 @@ Step-1: Install cAdvisor, append the following lines to the cAdviser.yml
 1.	Container related info. http://3.83.126.162:8080/containers/
 
 
+![image](https://user-images.githubusercontent.com/31573070/56849360-04f47180-6911-11e9-8ce0-1c67ee29e2bb.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849363-0aea5280-6911-11e9-9704-a823c64a0de4.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849367-10479d00-6911-11e9-9709-db6eeed12e84.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849373-189fd800-6911-11e9-9759-e03a517271b8.png)
+
+
+![image](https://user-images.githubusercontent.com/31573070/56849375-1c335f00-6911-11e9-
+895a-c3b4fc42d29b.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849379-281f2100-6911-11e9-9199-3c941f4169ea.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849381-2d7c6b80-6911-11e9-897b-c65523db4d0d.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849382-32411f80-6911-11e9-9f0d-be625fcef920.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849383-38370080-6911-11e9-9017-dca31036f03b.png)
+![image](https://user-images.githubusercontent.com/31573070/56849386-3cfbb480-6911-11e9-9bcb-d786b2f9b61f.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849389-4258ff00-6911-11e9-96a0-2aa9cf733158.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849391-471db300-6911-11e9-917f-8fae7e13b9db.png)
+
+![image](https://user-images.githubusercontent.com/31573070/56849393-4edd5780-6911-11e9-9653-de3f400675d3.png)
+
+
 
